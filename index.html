@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./Style/Style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <!-- ########################################################################################### -->
+
 </head>
 
 <body>
@@ -27,40 +28,6 @@
     <div class="the_description">
     </div>
 
-    <div class="the_gallery_container">
-
-        <div class="oneImage">
-        </div>
-
-        <div class="oneImage">
-        </div>
-
-        <div class="oneImage">
-        </div>
-
-        <div class="oneImage">
-        </div>
-
-        <div class="oneImage">
-
-        </div>
-        <div class="oneImage">
-
-        </div>
-        <div class="oneImage">
-
-        </div>
-        <div class="oneImage">
-        </div>
-
-    </div>
-
-    <!-- <div class="The_Image">
-        <img src="./Style/Images/gallery/Image-1.jpg" width="100%" alt="">
-    </div> -->
-
-    <div class="The_Image_Back_Cover">
-    </div>
 
     <a class="link_to_archviz" href="https://archviz.netlify.app/" target="_blank">
     </a>
@@ -70,16 +37,12 @@
         <ion-icon name="close-outline"></ion-icon>
     </div>
 
-    <div class="the_gallery">
-        <ion-icon name="camera-outline"></ion-icon>
-        <ion-icon name="close-outline"></ion-icon>
-    </div>
 
     <div class="the_blach_hover">
-
     </div>
 
     <a-scene id="the_scene" the_scene cursor="rayOrigin: mouse">
+
         <a-assets>
             <img id="Arrow-1" src="./Style/Images/PNG/Arrow-1.png">
             <img id="Scene-0" src="./Style/Images/Scene-0.jpg">
@@ -107,6 +70,7 @@
             animation__fade="property: components.material.material.color; type: color; from: #FFF; to: #000; dur: 300; startEvents: fade"
             animation__fadeback="property: components.material.material.color; type: color; from: #000; to: #FFF; dur: 300; startEvents: animationcomplete__fade">
         </a-sky>
+
         <!-- ############################################################ -->
         <!-- ############################################################ -->
         <!-- ############################################################ -->
@@ -119,7 +83,6 @@
                 material="src: #Arrow-1; transparent:true"
                 the_dote="Name_of_dote: Dote-1  ; Group_to_activate: Group-1 ; The_rotation: 0">
             </a-plane>
-
 
         </a-entity>
 
@@ -138,16 +101,11 @@
                 the_dote="Name_of_dote: Dote-2  ; Group_to_activate: Group-2 ; The_rotation: 0">
             </a-plane>
 
-
             <a-plane data-clickable class="pintings clickable" position="-3.27618 -0.8543 -6.80471"
                 rotation="-86.8993628719017 -165.09377796238078 -102.84363239480226"
                 material="src: #Arrow-1; transparent:true"
                 the_dote="Name_of_dote: Dote-3  ; Group_to_activate: Group-3 ; The_rotation: 0">
             </a-plane>
-
-
-
-
 
         </a-entity>
 
@@ -250,9 +208,6 @@
                 the_dote="Name_of_dote: Dote-3 ; Group_to_activate: Group-3 ; The_rotation: 0">
             </a-plane>
 
-
-
-
         </a-entity>
 
         <!-- Group7 -->
@@ -306,6 +261,13 @@
             </a-plane>
 
 
+            <a-plane data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
+                position="2.91628 -0.79335 0.04304" rotation="-42.9672509724507 -87.01510034651812 169.55253552408885"
+                the_dote="Name_of_dote: Dote-6 ; Group_to_activate: Group-6 ; The_rotation: 0">
+            </a-plane>
+
+
+
         </a-entity>
 
         <!-- Group10 -->
@@ -353,10 +315,6 @@
                 position="-0.29707 -0.67581 -2.03962" rotation="-89.6913862075742 99.16638926565263 -12.059042714118435"
                 the_dote="Name_of_dote: Dote-9 ; Group_to_activate: Group-9 ; The_rotation: 0">
             </a-plane>
-
-
-
-
         </a-entity>
 
         <!-- ############################################################ -->
@@ -369,32 +327,7 @@
         let theDescription = document.querySelector('.the_description')
         let the_sky = document.querySelector('#image-360')
         let the_cursor = document.querySelector('.a-mouse-cursor-hover')
-        // let theGallery = document.querySelector('.the_gallery')
-        // let theGalleryContainer = document.querySelector('.the_gallery_container')
-        let TheImage = document.querySelector('.The_Image')
-        let TheImageBackCover = document.querySelector('.The_Image_Back_Cover')
-        // let oneImage = document.querySelectorAll('.oneImage')
         let theBlachHover = document.querySelector('.the_blach_hover')
-
-        // theGallery.addEventListener('click', () => {
-        //     if (theGallery.classList.length === 1) {
-        //         theGallery.classList.add("the_gallery_active")
-        //         theGalleryContainer.style.left = '2%';
-        //         TheImage.style.top = '50%';
-        //         TheImage.style.opacity = '1';
-        //         TheImageBackCover.style.opacity = '1';
-        //         TheImageBackCover.style.zIndex = '9';
-        //     } else {
-        //         theGallery.classList.remove("the_gallery_active")
-        //         theGalleryContainer.style.left = '';
-        //         TheImage.style.top = '';
-        //         TheImage.style.opacity = '';
-        //         TheImageBackCover.style.opacity = '';
-        //         setTimeout(function () {
-        //             TheImageBackCover.style.zIndex = '0';
-        //         }, 1000);
-        //     }
-        // })
 
 
         theInfo.addEventListener('click', () => {
@@ -408,11 +341,6 @@
         })
 
 
-        // oneImage.forEach((image, index) => {
-        //     image.addEventListener('click', (e) => {
-        //         TheImage.childNodes[1].setAttribute("src", `./Style/Images/gallery/Image-${index + 1}.jpg`)
-        //     })
-        // });
 
 
         AFRAME.registerComponent('the_dote', {
@@ -479,33 +407,6 @@
                             case 'Dote-13':
                                 the_sky.setAttribute('src', '#Scene-13')
                                 break;
-                            case 'Dote-14':
-                                the_sky.setAttribute('src', '#Scene-14')
-                                break;
-                            case 'Dote-15':
-                                the_sky.setAttribute('src', '#Scene-15')
-                                break;
-                            case 'Dote-16':
-                                the_sky.setAttribute('src', '#Scene-16')
-                                break;
-                            case 'Dote-17':
-                                the_sky.setAttribute('src', '#Scene-17')
-                                break;
-                            case 'Dote-18':
-                                the_sky.setAttribute('src', '#Scene-18')
-                                break;
-                            case 'Dote-19':
-                                the_sky.setAttribute('src', '#Scene-19')
-                                break;
-                            case 'Dote-20':
-                                the_sky.setAttribute('src', '#Scene-20')
-                                break;
-                            case 'Dote-21':
-                                the_sky.setAttribute('src', '#Scene-21')
-                                break;
-                            case 'Dote-22':
-                                the_sky.setAttribute('src', '#Scene-22')
-                                break;
                             default:
                                 break;
                         }
@@ -520,9 +421,7 @@
 
                         theBlachHover.style.opacity = '0';
                         theBlachHover.style.height = '0vh';
-
                     }, 500);
-
                 });
             }
         });
