@@ -91,7 +91,12 @@ de haut standing.
             <img id="Scene-12" src="./Style/Images/Scene-12.jpg">
             <img id="Scene-13" src="./Style/Images/Scene-13.jpg">
 
+
+            <source id="the_sound" src="./Style/J.I.D - Workin Out (INSTRUMENTAL)_HIGH.mp3" type="audio/mpeg">
+
         </a-assets>
+        <a-sound position="0 20 0" sound="src: #the_sound; autoplay: true; loop: true" allow="autoplay"></a-sound>
+
 
         <a-entity laser-controls="hand: left"
             raycaster="objects: [data-clickable] ; far: 500; lineColor: #23343b; lineOpacity: 0.5"></a-entity>
